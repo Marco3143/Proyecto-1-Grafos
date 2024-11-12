@@ -28,20 +28,6 @@ class Grafo:
                 G.add_edge(self.g[clave][i].origen.id, self.g[clave][i].destino.id)
         return G       
      
-    def BFS(self,s):
-        lista = []
-        x = len(self.g)
-        for i in self.g:
-            if i.id == s:
-                lista.append(i)
-                break
-        while len(lista) != x:
-            for j in len(self.g[i]):
-                if self.g[i][j].destino in lista:
-                    self.g[i].pop(j)
-                else:
-                    lista.append(self.g[i][j].destino)
-
 def Imp_Grafo(gr):
     for clave in gr.g:
         print(f'{clave.id}->', end="")
